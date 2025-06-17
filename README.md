@@ -97,7 +97,7 @@ The frontend is developed using **Vue 2** with **Vite**, **Tailwind UI**, and **
 
 ### 🧠 Frontend Architecture
 ```
-Vue Router → Views (Pages) → Vuex (State Management)
+Vue Router → Views (Pages) → Vuex (State Management) -> Axios (HTTP Client) -> Backend API
 ```
 
 - Includes a **global pagination component**
