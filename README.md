@@ -72,7 +72,7 @@ The backend is built using **Laravel 12** and follows the **Repository Pattern**
 
 ### 🧩 Architectural Pattern
 ```
-API Routes → Controller → Services → Repository → Model
+API Routes → Controller → Services → Caching/Repository → Model
 ```
 
 ### ✅ Backend Assumptions
@@ -116,4 +116,5 @@ API collection is available in Postman:
 ## 🧑‍💻 Author
 
 Technical Test by **Zulkifli Raihan**
+<br/>
 Contact me at [zuran2907@gmail.com](mailto:zuran2907@gmail.com)
