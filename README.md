@@ -116,3 +116,4 @@ API collection is available in Postman:
 ## 🧑‍💻 Author
 
 Technical Test by **Zulkifli Raihan**
+Contact me at [zuran2907@gmail.com](mailto:zuran2907@gmail.com)
