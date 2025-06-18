@@ -365,7 +365,8 @@ export default {
     async clearFilters() {
       this.filters.company = undefined;
       this.filters.role = undefined;
-      this.filters.status = undefined;
+      this.filters.roleId = undefined;
+      this.filters.isFavorite = undefined;
       this.filters.paginate.page = undefined;
 
       this.updateURL();
