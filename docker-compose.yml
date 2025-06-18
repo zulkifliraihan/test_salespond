@@ -36,6 +36,8 @@ services:
       sh -c "
         wait-for-it db:3306 -t 60 &&
         composer install &&
+        php artisan cache:clear &&
+        php artisan config:clear &&
         php artisan migrate --force &&
         php artisan db:seed --force &&
         php artisan serve --host=0.0.0.0 --port=8000"
