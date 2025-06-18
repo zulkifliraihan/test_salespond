@@ -52,7 +52,7 @@ class CallLogService
             'page' => isset($request['page']) ? (int) $request['page'] : 1,
         ];
 
-        $cacheKey = 'contacts' . ':' . md5(serialize($keyData));
+        $cacheKey = 'call_logs' . ':' . md5(serialize($keyData));
         
         // Try to get data from cache first (Cache-Aside Pattern)
         $cachedData = Cache::get($cacheKey);
