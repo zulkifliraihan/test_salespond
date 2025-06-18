@@ -109,7 +109,7 @@ class ContactService
         ];
 
         // Store data in cache (Cache-Aside Pattern)
-        Cache::put($cacheKey, $responseData, 600);
+        Cache::tags(['contacts'])->put($cacheKey, $responseData, 600);
 
         return [
             'status' => true,
@@ -219,6 +219,8 @@ class ContactService
         }
 
         $data->update($request);
+
+        Cache::tags(['contacts'])->flush();
 
         return [
             'status' => true,

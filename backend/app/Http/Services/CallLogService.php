@@ -108,7 +108,7 @@ class CallLogService
         ];
 
         // Store data in cache (Cache-Aside Pattern)
-        Cache::put($cacheKey, $responseData, 600);
+        Cache::tags(['call_logs'])->put($cacheKey, $responseData, 600);
 
         return [
             'status' => true,
@@ -155,6 +155,8 @@ class CallLogService
     public function create(array $data)
     {
         $data = $this->callLogRepository->create($data);
+
+        Cache::tags(['call_logs'])->flush();
 
         return [
             'status' => true,
